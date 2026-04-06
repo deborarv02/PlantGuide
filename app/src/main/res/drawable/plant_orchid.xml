@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Fundo -->
+    <path android:fillColor="#FCE4EC" android:pathData="M0,0 L128,0 L128,128 L0,128 Z"/>
+
+    <!-- Vaso transparente/branco -->
+    <path android:fillColor="#BDBDBD" android:pathData="M44,112 L84,112 L80,122 L48,122 Z"/>
+    <path android:fillColor="#E0E0E0" android:pathData="M42,104 L86,104 L84,112 L44,112 Z"/>
+
+    <!-- Folhas base (largas e brilhantes) -->
+    <path android:fillColor="#388E3C" android:pathData="M35,104 C30,95 28,82 38,78 C44,76 50,80 52,88 C54,80 60,76 66,78 C76,82 74,95 64,104 Z"/>
+    <path android:fillColor="#2E7D32" android:pathData="M52,104 C50,95 48,82 58,78 C64,76 70,80 72,88 C74,80 80,76 86,78 C96,82 94,95 84,104 Z"/>
+
+    <!-- Haste floral -->
+    <path android:strokeColor="#66BB6A" android:strokeWidth="3" android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M75,78 C78,65 76,52 72,38 C70,28 68,20 66,12"/>
+
+    <!-- Flor 1 (topo) -->
+    <!-- Pétalas externas -->
+    <path android:fillColor="#F8BBD0" android:pathData="M66,12 C60,8 56,2 60,8 C56,4 62,0 66,6 C70,0 76,4 72,8 C76,2 72,8 66,12 Z"/>
+    <path android:fillColor="#F48FB1"
+        android:pathData="M60,8 C54,12 52,18 56,22 C58,24 62,23 64,20 C64,24 66,26 68,24 C72,20 70,14 66,12 Z"/>
+    <!-- Centro flor 1 -->
+    <path android:fillColor="#F06292" android:pathData="M64,14 C62,12 62,16 64,17 C66,16 66,12 64,14 Z"/>
+    <path android:fillColor="#FFEB3B" android:pathData="M63,15 C63,14 65,14 65,15 C65,16 63,16 63,15 Z"/>
+
+    <!-- Flor 2 (meio) -->
+    <path android:fillColor="#F8BBD0" android:pathData="M72,38 C68,32 62,30 64,36 C60,32 64,26 70,32 C74,26 80,30 76,36 C78,30 74,36 72,38 Z"/>
+    <path android:fillColor="#F48FB1"
+        android:pathData="M66,34 C60,36 58,42 62,46 C64,48 68,47 70,44 C70,48 72,50 74,48 C78,44 76,38 72,38 Z"/>
+    <path android:fillColor="#F06292" android:pathData="M69,38 C67,36 67,40 69,41 C71,40 71,36 69,38 Z"/>
+    <path android:fillColor="#FFEB3B" android:pathData="M68,39 C68,38 70,38 70,39 C70,40 68,40 68,39 Z"/>
+
+    <!-- Flor 3 (baixo) -->
+    <path android:fillColor="#E91E63" android:pathData="M74,56 C70,50 64,48 66,54 C62,50 66,44 72,50 C76,44 82,48 78,54 C80,48 76,54 74,56 Z"/>
+    <path android:fillColor="#C2185B"
+        android:pathData="M68,52 C62,54 60,60 64,64 C66,66 70,65 72,62 C72,66 74,68 76,66 C80,62 78,56 74,56 Z"/>
+    <path android:fillColor="#880E4F" android:pathData="M71,56 C69,54 69,58 71,59 C73,58 73,54 71,56 Z"/>
+    <path android:fillColor="#FFEB3B" android:pathData="M70,57 C70,56 72,56 72,57 C72,58 70,58 70,57 Z"/>
+
+</vector>

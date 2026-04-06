@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Fundo -->
+    <path android:fillColor="#E8F5E9" android:pathData="M0,0 L128,0 L128,128 L0,128 Z"/>
+
+    <!-- Vaso vermelho natalino -->
+    <path android:fillColor="#B71C1C" android:pathData="M44,110 L84,110 L80,122 L48,122 Z"/>
+    <path android:fillColor="#D32F2F" android:pathData="M42,102 L86,102 L84,110 L44,110 Z"/>
+
+    <!-- Segmentos do cacto (ramos) -->
+    <!-- Ramo central -->
+    <path android:fillColor="#388E3C" android:pathData="M58,100 C56,90 55,80 58,72 C59,68 63,68 64,72 C67,80 66,90 64,100 Z"/>
+    <!-- Segmentos com dentinhos nas bordas -->
+    <path android:fillColor="#2E7D32" android:pathData="M56,88 C54,84 53,78 56,74 C57,72 60,72 61,74 C62,70 65,70 66,72 C69,76 68,84 66,88 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M55,76 C53,72 52,66 55,62 C56,60 59,60 60,62 C61,58 64,58 65,60 C68,64 67,72 65,76 Z"/>
+
+    <!-- Ramo esquerdo -->
+    <path android:fillColor="#2E7D32" android:pathData="M56,88 C48,86 40,82 36,74 C34,68 38,62 44,64 C40,58 42,50 48,48 C54,46 58,52 57,58 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M44,64 C38,62 32,56 30,48 C28,42 34,36 40,38 C36,32 40,24 46,22 C52,20 56,26 54,32 Z"/>
+
+    <!-- Ramo direito -->
+    <path android:fillColor="#2E7D32" android:pathData="M64,88 C72,86 80,82 84,74 C86,68 82,62 76,64 C80,58 78,50 72,48 C66,46 62,52 63,58 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M76,64 C82,62 88,56 90,48 C92,42 86,36 80,38 C84,32 80,24 74,22 C68,20 64,26 66,32 Z"/>
+
+    <!-- Flor 1 (topo esquerdo) -->
+    <path android:fillColor="#E91E63" android:pathData="M46,22 C42,18 40,12 44,10 C46,8 48,10 48,12 C50,8 54,8 54,12 C56,8 58,10 56,14 C58,12 60,14 58,18 C60,16 60,20 56,22 Z"/>
+    <path android:fillColor="#F48FB1" android:pathData="M50,22 C48,18 48,14 50,12 C52,14 52,18 50,22 Z"/>
+    <path android:fillColor="#FFEB3B" android:pathData="M48,14 C48,12 52,12 52,14 C52,16 48,16 48,14 Z"/>
+
+    <!-- Flor 2 (topo direito) -->
+    <path android:fillColor="#C62828" android:pathData="M74,22 C70,18 68,12 72,10 C74,8 76,10 76,12 C78,8 82,8 82,12 C84,8 86,10 84,14 C86,12 88,14 86,18 C88,16 88,20 84,22 Z"/>
+    <path android:fillColor="#EF9A9A" android:pathData="M78,22 C76,18 76,14 78,12 C80,14 80,18 78,22 Z"/>
+    <path android:fillColor="#FFEB3B" android:pathData="M76,14 C76,12 80,12 80,14 C80,16 76,16 76,14 Z"/>
+
+</vector>

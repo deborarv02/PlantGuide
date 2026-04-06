@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Fundo lilás suave -->
+    <path android:fillColor="#F3E5F5" android:pathData="M0,0 L128,0 L128,128 L0,128 Z"/>
+
+    <!-- Vaso de barro -->
+    <path android:fillColor="#BF360C" android:pathData="M44,110 L84,110 L80,122 L48,122 Z"/>
+    <path android:fillColor="#E64A19" android:pathData="M42,102 L86,102 L84,110 L44,110 Z"/>
+
+    <!-- Hastes verdes (múltiplas) -->
+    <path android:strokeColor="#558B2F" android:strokeWidth="2" android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M48,100 C48,85 47,70 48,55 C49,45 50,38 50,28"/>
+    <path android:strokeColor="#558B2F" android:strokeWidth="2" android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M55,100 C55,85 54,70 55,55 C56,45 57,38 57,26"/>
+    <path android:strokeColor="#558B2F" android:strokeWidth="2" android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M62,100 C62,85 61,70 62,55 C63,45 64,38 64,24"/>
+    <path android:strokeColor="#558B2F" android:strokeWidth="2" android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M69,100 C69,85 68,70 69,55 C70,45 71,38 71,26"/>
+    <path android:strokeColor="#558B2F" android:strokeWidth="2" android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M76,100 C76,85 75,70 76,55 C77,45 78,38 78,28"/>
+
+    <!-- Folhas nas hastes -->
+    <path android:fillColor="#7CB342" android:pathData="M48,70 C44,68 42,64 44,62 C46,60 50,62 50,66 Z"/>
+    <path android:fillColor="#7CB342" android:pathData="M48,70 C52,68 54,64 52,62 C50,60 46,62 46,66 Z"/>
+    <path android:fillColor="#7CB342" android:pathData="M62,65 C58,63 56,59 58,57 C60,55 64,57 64,61 Z"/>
+    <path android:fillColor="#7CB342" android:pathData="M62,65 C66,63 68,59 66,57 C64,55 60,57 60,61 Z"/>
+    <path android:fillColor="#7CB342" android:pathData="M76,70 C72,68 70,64 72,62 C74,60 78,62 78,66 Z"/>
+    <path android:fillColor="#7CB342" android:pathData="M76,70 C80,68 82,64 80,62 C78,60 74,62 74,66 Z"/>
+
+    <!-- Espigas de flores (roxo) - haste 1 -->
+    <path android:fillColor="#7B1FA2" android:pathData="M47,28 C46,24 47,18 50,14 C51,12 52,12 52,14 C53,18 52,24 50,28 Z"/>
+    <path android:fillColor="#9C27B0" android:pathData="M48,26 C46,22 46,16 49,12 C50,10 51,10 51,12 Z"/>
+    <!-- Florezinhas pequenas na espiga 1 -->
+    <path android:fillColor="#CE93D8" android:pathData="M47,26 C45,24 46,22 48,23 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M49,22 C47,20 48,18 50,19 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M48,18 C46,16 47,14 49,15 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M51,26 C53,24 52,22 50,23 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M51,22 C53,20 52,18 50,19 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M51,18 C53,16 52,14 50,15 Z"/>
+
+    <!-- Espiga flor - haste 2 -->
+    <path android:fillColor="#6A1B9A" android:pathData="M54,26 C53,22 54,16 57,12 C58,10 59,10 59,12 C60,16 59,22 57,26 Z"/>
+    <path android:fillColor="#AB47BC" android:pathData="M54,24 C53,20 53,14 56,10 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M54,24 C52,22 53,20 55,21 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M55,20 C53,18 54,16 56,17 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M55,16 C53,14 54,12 56,13 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M58,24 C60,22 59,20 57,21 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M58,20 C60,18 59,16 57,17 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M58,16 C60,14 59,12 57,13 Z"/>
+
+    <!-- Espiga flor - haste 3 (central) -->
+    <path android:fillColor="#7B1FA2" android:pathData="M61,24 C60,20 61,14 64,10 C65,8 66,8 66,10 C67,14 66,20 64,24 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M61,22 C59,20 60,18 62,19 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M62,18 C60,16 61,14 63,15 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M62,14 C60,12 61,10 63,11 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M65,22 C67,20 66,18 64,19 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M65,18 C67,16 66,14 64,15 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M65,14 C67,12 66,10 64,11 Z"/>
+
+    <!-- Espiga flor - haste 4 -->
+    <path android:fillColor="#6A1B9A" android:pathData="M68,26 C67,22 68,16 71,12 C72,10 73,10 73,12 C74,16 73,22 71,26 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M68,24 C66,22 67,20 69,21 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M69,20 C67,18 68,16 70,17 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M69,16 C67,14 68,12 70,13 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M72,24 C74,22 73,20 71,21 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M72,20 C74,18 73,16 71,17 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M72,16 C74,14 73,12 71,13 Z"/>
+
+    <!-- Espiga flor - haste 5 -->
+    <path android:fillColor="#7B1FA2" android:pathData="M75,28 C74,24 75,18 78,14 C79,12 80,12 80,14 C81,18 80,24 78,28 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M75,26 C73,24 74,22 76,23 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M76,22 C74,20 75,18 77,19 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M76,18 C74,16 75,14 77,15 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M79,26 C81,24 80,22 78,23 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M79,22 C81,20 80,18 78,19 Z"/>
+    <path android:fillColor="#CE93D8" android:pathData="M79,18 C81,16 80,14 78,15 Z"/>
+
+</vector>

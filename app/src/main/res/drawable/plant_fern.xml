@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Fundo verde água -->
+    <path android:fillColor="#E8F5E9" android:pathData="M0,0 L128,0 L128,128 L0,128 Z"/>
+
+    <!-- Vaso (cesta suspensa simulada) -->
+    <path android:fillColor="#5D4037" android:pathData="M46,112 L82,112 L78,122 L50,122 Z"/>
+    <path android:fillColor="#795548" android:pathData="M44,104 L84,104 L82,112 L46,112 Z"/>
+
+    <!-- Fronde 1 - arqueada para esquerda -->
+    <path android:strokeColor="#33691E" android:strokeWidth="2" android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M60,102 C58,92 50,78 38,62 C28,48 18,36 14,24"/>
+    <!-- Folíolos fronde 1 esquerda -->
+    <path android:fillColor="#388E3C" android:pathData="M52,88 C48,86 46,82 48,80 C50,78 54,80 54,84 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M52,88 C56,86 58,82 56,80 C54,78 50,80 50,84 Z"/>
+    <path android:fillColor="#2E7D32" android:pathData="M46,78 C42,76 40,72 42,70 C44,68 48,70 48,74 Z"/>
+    <path android:fillColor="#2E7D32" android:pathData="M46,78 C50,76 52,72 50,70 C48,68 44,70 44,74 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M40,68 C36,66 34,62 36,60 C38,58 42,60 42,64 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M40,68 C44,66 46,62 44,60 C42,58 38,60 38,64 Z"/>
+    <path android:fillColor="#2E7D32" android:pathData="M34,58 C30,56 28,52 30,50 C32,48 36,50 36,54 Z"/>
+    <path android:fillColor="#2E7D32" android:pathData="M34,58 C38,56 40,52 38,50 C36,48 32,50 32,54 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M27,48 C23,46 21,42 23,40 C25,38 29,40 29,44 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M27,48 C31,46 33,42 31,40 C29,38 25,40 25,44 Z"/>
+    <path android:fillColor="#2E7D32" android:pathData="M20,38 C16,36 14,32 16,30 C18,28 22,30 22,34 Z"/>
+    <path android:fillColor="#2E7D32" android:pathData="M20,38 C24,36 26,32 24,30 C22,28 18,30 18,34 Z"/>
+
+    <!-- Fronde 2 - central direita -->
+    <path android:strokeColor="#33691E" android:strokeWidth="2" android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M64,102 C66,90 72,74 80,58 C86,46 94,34 98,22"/>
+    <!-- Folíolos fronde 2 -->
+    <path android:fillColor="#43A047" android:pathData="M74,80 C70,78 68,74 70,72 C72,70 76,72 76,76 Z"/>
+    <path android:fillColor="#43A047" android:pathData="M74,80 C78,78 80,74 78,72 C76,70 72,72 72,76 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M79,68 C75,66 73,62 75,60 C77,58 81,60 81,64 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M79,68 C83,66 85,62 83,60 C81,58 77,60 77,64 Z"/>
+    <path android:fillColor="#43A047" android:pathData="M84,56 C80,54 78,50 80,48 C82,46 86,48 86,52 Z"/>
+    <path android:fillColor="#43A047" android:pathData="M84,56 C88,54 90,50 88,48 C86,46 82,48 82,52 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M89,44 C85,42 83,38 85,36 C87,34 91,36 91,40 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M89,44 C93,42 95,38 93,36 C91,34 87,36 87,40 Z"/>
+    <path android:fillColor="#43A047" android:pathData="M94,32 C90,30 88,26 90,24 C92,22 96,24 96,28 Z"/>
+    <path android:fillColor="#43A047" android:pathData="M94,32 C98,30 100,26 98,24 C96,22 92,24 92,28 Z"/>
+
+    <!-- Fronde 3 - central esquerda arqueada -->
+    <path android:strokeColor="#33691E" android:strokeWidth="2" android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M62,102 C60,90 56,76 52,62 C48,50 44,40 42,28"/>
+    <!-- Folíolos fronde 3 -->
+    <path android:fillColor="#2E7D32" android:pathData="M56,78 C52,76 50,72 52,70 C54,68 58,70 58,74 Z"/>
+    <path android:fillColor="#2E7D32" android:pathData="M56,78 C60,76 62,72 60,70 C58,68 54,70 54,74 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M53,64 C49,62 47,58 49,56 C51,54 55,56 55,60 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M53,64 C57,62 59,58 57,56 C55,54 51,56 51,60 Z"/>
+    <path android:fillColor="#2E7D32" android:pathData="M50,52 C46,50 44,46 46,44 C48,42 52,44 52,48 Z"/>
+    <path android:fillColor="#2E7D32" android:pathData="M50,52 C54,50 56,46 54,44 C52,42 48,44 48,48 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M46,40 C42,38 40,34 42,32 C44,30 48,32 48,36 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M46,40 C50,38 52,34 50,32 C48,30 44,32 44,36 Z"/>
+
+    <!-- Fronde 4 - direita ampla -->
+    <path android:strokeColor="#33691E" android:strokeWidth="2" android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M67,102 C70,90 78,76 88,60 C96,48 106,36 112,24"/>
+    <!-- Folíolos fronde 4 -->
+    <path android:fillColor="#43A047" android:pathData="M82,72 C78,70 76,66 78,64 C80,62 84,64 84,68 Z"/>
+    <path android:fillColor="#43A047" android:pathData="M82,72 C86,70 88,66 86,64 C84,62 80,64 80,68 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M88,60 C84,58 82,54 84,52 C86,50 90,52 90,56 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M88,60 C92,58 94,54 92,52 C90,50 86,52 86,56 Z"/>
+    <path android:fillColor="#43A047" android:pathData="M95,48 C91,46 89,42 91,40 C93,38 97,40 97,44 Z"/>
+    <path android:fillColor="#43A047" android:pathData="M95,48 C99,46 101,42 99,40 C97,38 93,40 93,44 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M101,36 C97,34 95,30 97,28 C99,26 103,28 103,32 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M101,36 C105,34 107,30 105,28 C103,26 99,28 99,32 Z"/>
+    <path android:fillColor="#43A047" android:pathData="M107,24 C103,22 101,18 103,16 C105,14 109,16 109,20 Z"/>
+    <path android:fillColor="#43A047" android:pathData="M107,24 C111,22 113,18 111,16 C109,14 105,16 105,20 Z"/>
+
+</vector>

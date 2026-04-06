@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PlantGuide</string>
+    <string name="splash_subtitle">Seu guia completo de plantas</string>
+
+    <!-- Login -->
+    <string name="login_subtitle">Acesse seu guia de plantas</string>
+    <string name="login_welcome">Bem-vindo de volta!</string>
+    <string name="login_enter_credentials">Entre com suas credenciais para continuar</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_password">Senha</string>
+    <string name="btn_login">Entrar</string>
+    <string name="demo_hint">Toque aqui para preencher credenciais de demonstração</string>
+
+    <!-- Navigation Drawer -->
+    <string name="navigation_drawer_open">Abrir menu</string>
+    <string name="navigation_drawer_close">Fechar menu</string>
+    <string name="nav_home">Catálogo de Plantas</string>
+    <string name="nav_favorites">Minhas Favoritas</string>
+    <string name="nav_about">Sobre o App</string>
+    <string name="nav_logout">Sair</string>
+
+    <!-- Lista -->
+    <string name="search_hint">Buscar planta…</string>
+    <string name="chip_all">Todas</string>
+    <string name="empty_plants">Nenhuma planta encontrada</string>
+    <string name="empty_favorites">Você ainda não favoritou nenhuma planta.\nToque no ♥ na tela de detalhes!</string>
+
+    <!-- Detalhe -->
+    <string name="section_info">Informações Gerais</string>
+    <string name="label_light">☀️ Nível de Luz</string>
+    <string name="label_water">💧 Frequência de Rega</string>
+    <string name="label_environment">🏠 Ambiente Ideal</string>
+    <string name="label_care">🌿 Cuidados Básicos</string>
+    <string name="toxic_for_pets">⚠ Tóxica para pets — mantenha fora do alcance de animais</string>
+    <string name="safe_for_pets">✓ Segura para pets — não representa risco a cães e gatos</string>
+
+    <!-- Sobre -->
+    <string name="app_version">Versão 1.0 — 2026</string>
+    <string name="about_section_app">Sobre o PlantGuide</string>
+    <string name="about_description">O PlantGuide é um aplicativo de guia de plantas desenvolvido como projeto final da disciplina de Desenvolvimento Mobile II da Universidade de Passo Fundo (UPF). O app reúne informações detalhadas sobre espécies de plantas, incluindo nível de luz, frequência de rega, ambiente ideal, cuidados básicos e indicação de toxicidade para animais de estimação.</string>
+    <string name="about_section_tech">Tecnologias Utilizadas</string>
+    <string name="about_technologies">• Kotlin\n• Android Studio\n• Room (SQLite) — persistência local\n• ViewModel + LiveData\n• CameraX + Gemini Vision API\n• Material Design 3\n• ViewBinding\n• RecyclerView com DiffUtil\n• Navigation Drawer</string>
+    <string name="about_section_discipline">Disciplina</string>
+    <string name="about_discipline_info">ADS — Desenvolvimento Mobile II\nSemestre: 2026/1\nProfessores: Diego A. Lusa e Jaqson Dalbosco\nUniversidade de Passo Fundo — UPF</string>
+
+    <!-- PlantScanActivity -->
+    <string name="scan_title">Identificar Planta</string>
+    <string name="scan_analyzing">Analisando planta…</string>
+    <string name="scan_capture_button">Capturar foto</string>
+    <string name="scan_again">Escanear novamente</string>
+    <string name="scan_not_found">Nenhuma planta identificada. Tente com melhor iluminação.</string>
+    <string name="scan_camera_permission_denied">Permissão de câmera necessária para usar este recurso.</string>
+    <string name="scan_camera_error">Não foi possível iniciar a câmera.</string>
+    <string name="scan_capture_error">Erro ao capturar a foto. Tente novamente.</string>
+    <string name="scan_api_error">Erro da API (%d). Verifique sua chave Gemini.</string>
+    <string name="scan_network_error">Erro de rede. Verifique sua conexão e tente novamente.</string>
+    <string name="scan_parse_error">Não foi possível interpretar a resposta. Tente novamente.</string>
+    <string name="scan_result_name_placeholder">Carregando…</string>
+    <string name="scan_result_scientific_placeholder"> </string>
+    <string name="scan_toxicity_icon_desc">Ícone de toxicidade</string>
+
+    <!-- IMPORTANTE: coloque sua chave Gemini aqui antes de compilar -->
+    <string name="gemini_api_key">SUA_CHAVE_GEMINI_AQUI</string>
+</resources>

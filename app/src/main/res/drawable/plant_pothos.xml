@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Fundo -->
+    <path android:fillColor="#F1F8E9" android:pathData="M0,0 L128,0 L128,128 L0,128 Z"/>
+
+    <!-- Vaso -->
+    <path android:fillColor="#5D4037" android:pathData="M46,110 L82,110 L78,122 L50,122 Z"/>
+    <path android:fillColor="#795548" android:pathData="M44,102 L84,102 L82,110 L46,110 Z"/>
+
+    <!-- Haste principal -->
+    <path android:strokeColor="#558B2F" android:strokeWidth="3" android:fillColor="#00000000"
+        android:pathData="M64,100 C64,85 64,70 64,55"/>
+    <!-- Hastes laterais -->
+    <path android:strokeColor="#558B2F" android:strokeWidth="2" android:fillColor="#00000000"
+        android:pathData="M64,80 C55,72 40,65 28,60"/>
+    <path android:strokeColor="#558B2F" android:strokeWidth="2" android:fillColor="#00000000"
+        android:pathData="M64,65 C73,57 88,50 100,45"/>
+    <path android:strokeColor="#558B2F" android:strokeWidth="2" android:fillColor="#00000000"
+        android:pathData="M64,50 C55,42 42,36 32,30"/>
+
+    <!-- Folha grande superior esquerda -->
+    <path android:fillColor="#7CB342"
+        android:pathData="M28,60 C22,52 20,42 26,36 C30,32 36,34 38,40 C40,34 46,32 50,36 C56,42 52,54 44,58 Z"/>
+    <path android:strokeColor="#558B2F" android:strokeWidth="1" android:fillColor="#00000000"
+        android:pathData="M28,60 C35,52 40,46 44,58"/>
+
+    <!-- Folha direita -->
+    <path android:fillColor="#8BC34A"
+        android:pathData="M100,45 C106,37 108,27 102,21 C98,17 92,19 90,25 C88,19 82,17 78,21 C72,27 76,39 84,43 Z"/>
+    <path android:strokeColor="#558B2F" android:strokeWidth="1" android:fillColor="#00000000"
+        android:pathData="M100,45 C93,37 88,31 84,43"/>
+
+    <!-- Folha esquerda baixa -->
+    <path android:fillColor="#689F38"
+        android:pathData="M32,30 C26,22 24,12 30,6 C34,2 40,4 42,10 C44,4 50,2 54,6 C60,12 56,24 48,28 Z"/>
+    <path android:strokeColor="#558B2F" android:strokeWidth="1" android:fillColor="#00000000"
+        android:pathData="M32,30 C39,22 44,16 48,28"/>
+
+    <!-- Folha central pequena -->
+    <path android:fillColor="#7CB342"
+        android:pathData="M64,55 C58,47 56,37 62,31 C65,28 68,29 69,33 C71,29 75,28 78,31 C84,37 81,48 74,52 Z"/>
+
+</vector>

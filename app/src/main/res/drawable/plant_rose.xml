@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Fundo rosado -->
+    <path android:fillColor="#FCE4EC" android:pathData="M0,0 L128,0 L128,128 L0,128 Z"/>
+
+    <!-- Vaso -->
+    <path android:fillColor="#5D4037" android:pathData="M46,112 L82,112 L78,122 L50,122 Z"/>
+    <path android:fillColor="#795548" android:pathData="M44,104 L84,104 L82,112 L46,112 Z"/>
+
+    <!-- Haste principal -->
+    <path android:strokeColor="#388E3C" android:strokeWidth="3" android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M64,102 C64,90 63,78 64,65 C65,55 65,48 64,38"/>
+    <!-- Haste lateral esquerda -->
+    <path android:strokeColor="#388E3C" android:strokeWidth="2" android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M64,75 C56,70 46,64 38,55"/>
+    <!-- Haste lateral direita -->
+    <path android:strokeColor="#388E3C" android:strokeWidth="2" android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M64,65 C72,60 82,54 90,46"/>
+
+    <!-- Espinhos -->
+    <path android:fillColor="#2E7D32" android:pathData="M64,85 L68,82 L64,88 Z"/>
+    <path android:fillColor="#2E7D32" android:pathData="M64,70 L60,67 L64,73 Z"/>
+    <path android:fillColor="#2E7D32" android:pathData="M52,72 L56,68 L50,70 Z"/>
+    <path android:fillColor="#2E7D32" android:pathData="M70,68 L66,65 L72,66 Z"/>
+
+    <!-- Folhas compostas -->
+    <!-- Folha esquerda -->
+    <path android:fillColor="#388E3C" android:pathData="M38,55 C32,50 28,42 32,38 C36,34 42,36 44,42 Z"/>
+    <path android:fillColor="#2E7D32" android:pathData="M38,55 C42,50 44,42 40,38 C36,34 30,38 32,44 Z"/>
+    <path android:strokeColor="#1B5E20" android:strokeWidth="0.8" android:fillColor="#00000000"
+        android:pathData="M38,55 C38,48 38,42 38,38"/>
+
+    <!-- Folha direita -->
+    <path android:fillColor="#388E3C" android:pathData="M90,46 C96,40 100,32 96,28 C92,24 86,26 84,32 Z"/>
+    <path android:fillColor="#2E7D32" android:pathData="M90,46 C86,40 84,32 88,28 C92,24 98,28 96,34 Z"/>
+    <path android:strokeColor="#1B5E20" android:strokeWidth="0.8" android:fillColor="#00000000"
+        android:pathData="M90,46 C90,39 90,33 90,28"/>
+
+    <!-- Sépala (folhas verdes embaixo da flor) -->
+    <path android:fillColor="#2E7D32" android:pathData="M58,42 C54,36 54,30 58,28 C60,27 62,28 62,30 Z"/>
+    <path android:fillColor="#388E3C" android:pathData="M64,38 C60,32 60,24 64,22 C66,21 67,22 67,25 Z"/>
+    <path android:fillColor="#2E7D32" android:pathData="M70,42 C74,36 74,30 70,28 C68,27 66,28 66,30 Z"/>
+
+    <!-- ROSA - camada externa de pétalas -->
+    <path android:fillColor="#E91E63"
+        android:pathData="M64,38 C56,34 50,28 50,20 C50,14 54,10 58,12 C56,6 62,2 66,4 C70,2 76,6 74,12 C78,10 82,14 82,20 C82,28 76,34 64,38 Z"/>
+
+    <!-- Camada intermediária de pétalas -->
+    <path android:fillColor="#C2185B"
+        android:pathData="M64,34 C58,30 54,24 54,18 C54,14 57,11 60,13 C59,8 63,5 66,7 C69,5 73,8 72,13 C75,11 78,14 78,18 C78,24 72,30 64,34 Z"/>
+
+    <!-- Camada interna -->
+    <path android:fillColor="#AD1457"
+        android:pathData="M64,30 C60,27 57,22 58,17 C59,14 61,12 63,14 C63,10 65,9 66,10 C67,9 69,10 69,14 C71,12 73,14 72,17 C71,22 68,27 64,30 Z"/>
+
+    <!-- Centro da rosa -->
+    <path android:fillColor="#880E4F" android:pathData="M62,18 C60,16 60,12 62,11 C63,10 65,10 66,11 C68,12 68,16 66,18 C65,19 63,19 62,18 Z"/>
+    <path android:fillColor="#F8BBD0" android:pathData="M63,16 C62,15 63,13 64,13 C65,13 66,15 65,16 C65,17 63,17 63,16 Z"/>
+
+</vector>

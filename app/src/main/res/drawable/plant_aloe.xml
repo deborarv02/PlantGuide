@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Fundo -->
+    <path android:fillColor="#F9FBE7" android:pathData="M0,0 L128,0 L128,128 L0,128 Z"/>
+
+    <!-- Vaso de barro simples -->
+    <path android:fillColor="#BF360C" android:pathData="M44,110 L84,110 L80,122 L48,122 Z"/>
+    <path android:fillColor="#E64A19" android:pathData="M42,102 L86,102 L84,110 L44,110 Z"/>
+
+    <!-- Folhas externas (mais baixas, abertas) -->
+    <!-- Folha esquerda externa -->
+    <path android:fillColor="#558B2F"
+        android:pathData="M56,100 C44,94 34,80 30,64 C28,54 32,46 38,50 C34,42 38,34 44,38 C42,30 48,26 54,32 C52,24 58,20 62,26 L62,100 Z"/>
+    <!-- Serrilhas folha esq externa -->
+    <path android:fillColor="#33691E" android:pathData="M30,64 L32,62 L30,60 Z"/>
+    <path android:fillColor="#33691E" android:pathData="M32,56 L34,54 L32,52 Z"/>
+    <path android:fillColor="#33691E" android:pathData="M36,48 L38,46 L36,44 Z"/>
+    <path android:fillColor="#33691E" android:pathData="M42,40 L44,38 L42,36 Z"/>
+    <!-- Linha interior (gel) -->
+    <path android:strokeColor="#AED581" android:strokeWidth="1" android:fillColor="#00000000"
+        android:pathData="M56,100 C48,92 40,78 38,64 C36,56 38,50 42,50"/>
+
+    <!-- Folha direita externa -->
+    <path android:fillColor="#558B2F"
+        android:pathData="M72,100 C84,94 94,80 98,64 C100,54 96,46 90,50 C94,42 90,34 84,38 C86,30 80,26 74,32 C76,24 70,20 66,26 L66,100 Z"/>
+    <!-- Serrilhas folha dir externa -->
+    <path android:fillColor="#33691E" android:pathData="M98,64 L96,62 L98,60 Z"/>
+    <path android:fillColor="#33691E" android:pathData="M96,56 L94,54 L96,52 Z"/>
+    <path android:fillColor="#33691E" android:pathData="M92,48 L90,46 L92,44 Z"/>
+    <path android:fillColor="#33691E" android:pathData="M86,40 L84,38 L86,36 Z"/>
+    <!-- Linha interior (gel) -->
+    <path android:strokeColor="#AED581" android:strokeWidth="1" android:fillColor="#00000000"
+        android:pathData="M72,100 C80,92 88,78 90,64 C92,56 90,50 86,50"/>
+
+    <!-- Folha central esquerda -->
+    <path android:fillColor="#689F38"
+        android:pathData="M60,100 C54,88 50,72 52,52 C53,44 56,38 60,36 C62,34 64,36 64,40 L64,100 Z"/>
+    <!-- Serrilhas -->
+    <path android:fillColor="#33691E" android:pathData="M52,72 L50,70 L52,68 Z"/>
+    <path android:fillColor="#33691E" android:pathData="M52,58 L50,56 L52,54 Z"/>
+    <path android:fillColor="#33691E" android:pathData="M54,46 L52,44 L54,42 Z"/>
+    <!-- Gel interior -->
+    <path android:strokeColor="#DCEDC8" android:strokeWidth="1.5" android:fillColor="#00000000"
+        android:pathData="M60,100 C56,88 54,74 55,56 C56,46 58,40 61,38"/>
+
+    <!-- Folha central direita -->
+    <path android:fillColor="#689F38"
+        android:pathData="M68,100 C74,88 78,72 76,52 C75,44 72,38 68,36 C66,34 64,36 64,40 L64,100 Z"/>
+    <!-- Serrilhas -->
+    <path android:fillColor="#33691E" android:pathData="M76,72 L78,70 L76,68 Z"/>
+    <path android:fillColor="#33691E" android:pathData="M76,58 L78,56 L76,54 Z"/>
+    <path android:fillColor="#33691E" android:pathData="M74,46 L76,44 L74,42 Z"/>
+    <!-- Gel interior -->
+    <path android:strokeColor="#DCEDC8" android:strokeWidth="1.5" android:fillColor="#00000000"
+        android:pathData="M68,100 C72,88 74,74 73,56 C72,46 70,40 67,38"/>
+
+    <!-- Folha central (mais alta) -->
+    <path android:fillColor="#7CB342"
+        android:pathData="M62,100 C60,82 60,62 62,40 C63,34 64,30 65,30 C66,30 66,34 67,40 C68,60 68,82 66,100 Z"/>
+    <!-- Serrilhas centrais -->
+    <path android:fillColor="#33691E" android:pathData="M60,70 L58,68 L60,66 Z"/>
+    <path android:fillColor="#33691E" android:pathData="M68,70 L70,68 L68,66 Z"/>
+    <path android:fillColor="#33691E" android:pathData="M60,52 L58,50 L60,48 Z"/>
+    <path android:fillColor="#33691E" android:pathData="M68,52 L70,50 L68,48 Z"/>
+    <!-- Ponta -->
+    <path android:fillColor="#33691E" android:pathData="M64,30 C62,28 63,26 64,26 C65,26 66,28 64,30 Z"/>
+
+</vector>

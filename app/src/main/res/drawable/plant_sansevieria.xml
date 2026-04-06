@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Fundo suave -->
+    <path android:fillColor="#E8F5E9" android:pathData="M0,0 L128,0 L128,128 L0,128 Z"/>
+
+    <!-- Vaso -->
+    <path android:fillColor="#8D6E63" android:pathData="M44,108 L84,108 L80,120 L48,120 Z"/>
+    <path android:fillColor="#A1887F" android:pathData="M42,100 L86,100 L84,108 L44,108 Z"/>
+
+    <!-- Folha central (longa) -->
+    <path android:fillColor="#388E3C" android:pathData="M62,98 C61,80 59,55 62,20 C63,14 65,14 66,20 C69,55 67,80 66,98 Z"/>
+    <!-- Listras da folha central -->
+    <path android:fillColor="#A5D6A7" android:pathData="M63,85 C62,70 61,50 63,28 C63.5,26 64,26 64.5,28 C64,50 64,70 64,85 Z"/>
+
+    <!-- Folha esquerda -->
+    <path android:fillColor="#2E7D32" android:pathData="M50,98 C49,82 47,60 49,30 C50,24 52,25 53,30 C55,60 54,82 53,98 Z"/>
+    <!-- Listras folha esquerda -->
+    <path android:fillColor="#81C784" android:pathData="M51,85 C50,70 49,55 50,38 C50.5,36 51,36 51.5,38 C52,55 52,70 52,85 Z"/>
+
+    <!-- Folha direita -->
+    <path android:fillColor="#2E7D32" android:pathData="M75,98 C74,82 72,60 74,30 C75,24 77,25 78,30 C80,60 79,82 78,98 Z"/>
+    <!-- Listras folha direita -->
+    <path android:fillColor="#81C784" android:pathData="M76,85 C75,70 74,55 75,38 C75.5,36 76,36 76.5,38 C77,55 77,70 77,85 Z"/>
+
+    <!-- Folha extra esquerda menor -->
+    <path android:fillColor="#388E3C" android:pathData="M56,98 C55,86 54,68 55,45 C56,40 57,40 58,45 C59,68 58,86 57,98 Z"/>
+    <!-- Folha extra direita menor -->
+    <path android:fillColor="#388E3C" android:pathData="M69,98 C68,86 67,68 68,45 C69,40 70,40 71,45 C72,68 71,86 70,98 Z"/>
+
+</vector>

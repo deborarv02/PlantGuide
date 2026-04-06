@@ -89,7 +89,7 @@ com.plantguide
 
 ## 👥 Integrantes
 
-> _(Adicione os nomes dos integrantes da dupla aqui)_
+Débora Rebelatto de Vila
 
 ---
 
@@ -97,5 +97,5 @@ com.plantguide
 
 **ADS — Desenvolvimento Mobile II**  
 Semestre: 2026/1  
-Professores: Diego A. Lusa e Jaqson Dalbosco  
+Professores: Jaqson Dalbosco e Diego A. Lusa
 Universidade de Passo Fundo — UPF

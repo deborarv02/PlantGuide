@@ -82,7 +82,7 @@ com.plantguide
 | Catálogo | Lista de plantas com busca e filtro por categoria |
 | Detalhe | Informações completas da planta + favoritar |
 | Favoritas | Lista de plantas favoritadas |
-| Identificar Planta | Câmera em tempo real + IA Gemini |
+| Identificar Planta | Câmera em tempo real + OpenRouter.ai |
 | Sobre | Informações sobre o app e a disciplina |
 
 ---

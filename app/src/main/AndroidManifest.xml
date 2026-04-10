@@ -53,6 +53,12 @@
             android:parentActivityName=".ui.home.HomeActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".ui.addedit.AddEditPlantActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.home.HomeActivity"
+            android:windowSoftInputMode="adjustResize" />
+
     </application>
 
 </manifest>

@@ -68,6 +68,7 @@ class PlantViewModel(application: Application) : AndroidViewModel(application) {
     fun setSelectedCategory(category: String?) { _selectedCategory.value = category }
     fun getPlantById(id: Int): LiveData<Plant> = repository.getPlantById(id)
     fun toggleFavorite(plant: Plant) = viewModelScope.launch { repository.toggleFavorite(plant) }
+    fun insertPlant(plant: Plant) = viewModelScope.launch { repository.insertPlant(plant) }
     fun updatePlant(plant: Plant) = viewModelScope.launch { repository.updatePlant(plant) }
     fun deletePlant(plant: Plant) = viewModelScope.launch { repository.deletePlant(plant) }
     fun getCategories(): List<String> =

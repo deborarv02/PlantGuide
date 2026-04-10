@@ -38,8 +38,18 @@ class PlantAdapter(
             binding.ivPetIcon.contentDescription =
                 if (plant.isToxicForPets) "Tóxica para pets" else "Segura para pets"
 
-            // Carrega imagem real da internet usando Coil
-            if (plant.imageUrl.isNotEmpty()) {
+            val resId = binding.root.context.resources.getIdentifier(
+                plant.imageResName, "drawable", binding.root.context.packageName
+            )
+
+            if (resId != 0) {
+                binding.ivPlant.load(resId) {
+                    crossfade(true)
+                    placeholder(R.drawable.ic_plant_placeholder)
+                    error(R.drawable.ic_plant_placeholder)
+                    transformations(RoundedCornersTransformation(16f))
+                }
+            } else if (plant.imageUrl.isNotEmpty()) {
                 binding.ivPlant.load(plant.imageUrl) {
                     crossfade(true)
                     placeholder(R.drawable.ic_plant_placeholder)
@@ -47,12 +57,7 @@ class PlantAdapter(
                     transformations(RoundedCornersTransformation(16f))
                 }
             } else {
-                val resId = binding.root.context.resources.getIdentifier(
-                    plant.imageResName, "drawable", binding.root.context.packageName
-                )
-                binding.ivPlant.setImageResource(
-                    if (resId != 0) resId else R.drawable.ic_plant_placeholder
-                )
+                binding.ivPlant.setImageResource(R.drawable.ic_plant_placeholder)
             }
 
             binding.ivFavorite.setImageResource(

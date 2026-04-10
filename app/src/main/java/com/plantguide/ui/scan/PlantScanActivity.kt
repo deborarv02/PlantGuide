@@ -15,7 +15,10 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
+import androidx.lifecycle.ViewModelProvider
 import androidx.core.content.ContextCompat
+import com.plantguide.data.entity.Plant
+import com.plantguide.ui.PlantViewModel
 import com.plantguide.R
 import com.plantguide.databinding.ActivityPlantScanBinding
 import kotlinx.coroutines.*
@@ -31,9 +34,11 @@ class PlantScanActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPlantScanBinding
     private lateinit var cameraExecutor: ExecutorService
+    private lateinit var plantViewModel: PlantViewModel
 
     private var imageCapture: ImageCapture? = null
     private var isAnalyzing = false
+    private var lastScannedPlant: ScanResult? = null
 
     private val requestPermissionLauncher =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
@@ -54,9 +59,11 @@ class PlantScanActivity : AppCompatActivity() {
         supportActionBar?.title = getString(R.string.scan_title)
 
         cameraExecutor = Executors.newSingleThreadExecutor()
+        plantViewModel = ViewModelProvider(this)[PlantViewModel::class.java]
 
         binding.btnCapture.setOnClickListener { captureAndAnalyze() }
         binding.btnScanAgain.setOnClickListener { resetOverlay() }
+        binding.btnAddScannedPlant.setOnClickListener { saveScannedPlant() }
 
         if (hasCameraPermission()) startCamera()
         else requestPermissionLauncher.launch(Manifest.permission.CAMERA)
@@ -314,11 +321,15 @@ class PlantScanActivity : AppCompatActivity() {
     }
 
     private fun showResult(plant: ScanResult) {
+        lastScannedPlant = plant
         showLoading(false)
         isAnalyzing = false
         binding.cardResult.visibility = View.VISIBLE
         binding.btnCapture.visibility = View.GONE
         binding.btnScanAgain.visibility = View.VISIBLE
+        binding.btnAddScannedPlant.visibility = View.VISIBLE
+        binding.btnAddScannedPlant.isEnabled = true
+        binding.btnAddScannedPlant.text = getString(R.string.scan_add_plant)
 
         binding.tvResultName.text           = plant.commonName
         binding.tvResultScientific.text     = plant.scientificName
@@ -358,9 +369,37 @@ class PlantScanActivity : AppCompatActivity() {
 
     private fun resetOverlay() {
         isAnalyzing = false
+        lastScannedPlant = null
         binding.cardResult.visibility = View.GONE
         binding.btnCapture.visibility = View.VISIBLE
         binding.btnScanAgain.visibility = View.GONE
+        binding.btnAddScannedPlant.visibility = View.GONE
+        binding.btnAddScannedPlant.isEnabled = true
+        binding.btnAddScannedPlant.text = getString(R.string.scan_add_plant)
+    }
+
+    private fun saveScannedPlant() {
+        val scanned = lastScannedPlant ?: return
+
+        val plant = Plant(
+            name = scanned.commonName.ifBlank { "Planta escaneada" },
+            scientificName = scanned.scientificName.ifBlank { "-" },
+            imageResName = "ic_plant_placeholder",
+            imageUrl = "",
+            lightLevel = scanned.lightLevel.ifBlank { "-" },
+            wateringFrequency = scanned.watering.ifBlank { "-" },
+            idealEnvironment = scanned.idealEnvironment.ifBlank { "-" },
+            basicCare = scanned.basicCare.ifBlank { "-" },
+            isToxicForPets = scanned.isToxic,
+            category = getString(R.string.scan_unknown_category),
+            isFavorite = false
+        )
+
+        plantViewModel.insertPlant(plant)
+
+        Toast.makeText(this, getString(R.string.scan_plant_saved), Toast.LENGTH_SHORT).show()
+        binding.btnAddScannedPlant.isEnabled = false
+        binding.btnAddScannedPlant.text = getString(R.string.scan_added)
     }
 
     data class ScanResult(

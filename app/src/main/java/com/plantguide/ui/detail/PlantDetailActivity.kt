@@ -1,18 +1,24 @@
 package com.plantguide.ui.detail
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import coil.load
 import com.plantguide.R
+import com.plantguide.data.entity.Plant
 import com.plantguide.databinding.ActivityPlantDetailBinding
 import com.plantguide.ui.PlantViewModel
+import com.plantguide.ui.addedit.AddEditPlantActivity
 
 class PlantDetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPlantDetailBinding
     private lateinit var viewModel: PlantViewModel
+    private var currentPlant: Plant? = null
 
     companion object {
         const val EXTRA_PLANT_ID = "extra_plant_id"
@@ -33,21 +39,25 @@ class PlantDetailActivity : AppCompatActivity() {
 
         viewModel.getPlantById(plantId).observe(this) { plant ->
             plant ?: return@observe
+            currentPlant = plant
 
             supportActionBar?.title = plant.name
 
-            // Carrega imagem real da internet usando Coil
-            if (plant.imageUrl.isNotEmpty()) {
+            val resId = resources.getIdentifier(plant.imageResName, "drawable", packageName)
+            if (resId != 0) {
+                binding.ivPlantDetail.load(resId) {
+                    crossfade(true)
+                    placeholder(R.drawable.ic_plant_placeholder)
+                    error(R.drawable.ic_plant_placeholder)
+                }
+            } else if (plant.imageUrl.isNotEmpty()) {
                 binding.ivPlantDetail.load(plant.imageUrl) {
                     crossfade(true)
                     placeholder(R.drawable.ic_plant_placeholder)
                     error(R.drawable.ic_plant_placeholder)
                 }
             } else {
-                val resId = resources.getIdentifier(plant.imageResName, "drawable", packageName)
-                binding.ivPlantDetail.setImageResource(
-                    if (resId != 0) resId else R.drawable.ic_plant_placeholder
-                )
+                binding.ivPlantDetail.setImageResource(R.drawable.ic_plant_placeholder)
             }
 
             binding.tvPlantName.text = plant.name
@@ -72,20 +82,56 @@ class PlantDetailActivity : AppCompatActivity() {
 
             updateFavoriteButton(plant.isFavorite)
             binding.fabFavorite.setOnClickListener { viewModel.toggleFavorite(plant) }
+
+            // Invalida menu para mostrar opções corretas após carregar a planta
+            invalidateOptionsMenu()
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_plant_detail, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressedDispatcher.onBackPressed()
+                true
+            }
+            R.id.action_edit -> {
+                currentPlant?.let { plant ->
+                    val intent = Intent(this, AddEditPlantActivity::class.java).apply {
+                        putExtra(AddEditPlantActivity.EXTRA_PLANT_ID, plant.id)
+                    }
+                    startActivity(intent)
+                }
+                true
+            }
+            R.id.action_delete -> {
+                confirmDelete()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun confirmDelete() {
+        val plant = currentPlant ?: return
+        AlertDialog.Builder(this)
+            .setTitle(getString(R.string.dialog_delete_title))
+            .setMessage(getString(R.string.dialog_delete_message, plant.name))
+            .setPositiveButton(getString(R.string.dialog_delete_confirm)) { _, _ ->
+                viewModel.deletePlant(plant)
+                finish()
+            }
+            .setNegativeButton(getString(R.string.dialog_delete_cancel), null)
+            .show()
     }
 
     private fun updateFavoriteButton(isFavorite: Boolean) {
         binding.fabFavorite.setImageResource(
             if (isFavorite) R.drawable.ic_favorite_filled else R.drawable.ic_favorite_outline
         )
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == android.R.id.home) {
-            onBackPressedDispatcher.onBackPressed()
-            return true
-        }
-        return super.onOptionsItemSelected(item)
     }
 }

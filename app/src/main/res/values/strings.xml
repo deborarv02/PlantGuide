@@ -62,4 +62,38 @@
 
     <!-- IMPORTANTE: coloque sua chave Gemini aqui antes de compilar -->
     <string name="gemini_api_key">SUA_CHAVE_GEMINI_AQUI</string>
+
+    <!-- CRUD - AddEditPlantActivity -->
+    <string name="title_add_plant">Nova Planta</string>
+    <string name="title_edit_plant">Editar Planta</string>
+    <string name="hint_plant_name">Nome comum *</string>
+    <string name="hint_scientific_name">Nome científico *</string>
+    <string name="hint_category">Categoria *</string>
+    <string name="hint_light_level">Nível de luz</string>
+    <string name="hint_watering">Frequência de rega</string>
+    <string name="hint_environment">Ambiente ideal</string>
+    <string name="hint_basic_care">Cuidados básicos</string>
+    <string name="hint_image_url">URL da imagem (opcional)</string>
+    <string name="label_toxic_switch">Tóxica para pets?</string>
+    <string name="btn_save_plant">Salvar Planta</string>
+    <string name="error_required_fields">Preencha os campos obrigatórios: Nome, Nome científico e Categoria</string>
+    <string name="plant_added">Planta adicionada com sucesso!</string>
+    <string name="plant_updated">Planta atualizada com sucesso!</string>
+
+    <!-- Menu detalhe -->
+    <string name="menu_edit">Editar</string>
+    <string name="menu_delete">Excluir</string>
+
+    <!-- Dialog de confirmação de exclusão -->
+    <string name="dialog_delete_title">Excluir Planta</string>
+    <string name="dialog_delete_message">Deseja excluir \"%s\" do catálogo?</string>
+    <string name="dialog_delete_confirm">Excluir</string>
+    <string name="dialog_delete_cancel">Cancelar</string>
+
+    <!-- FAB -->
+    <string name="fab_add_plant_desc">Adicionar nova planta</string>
+    <string name="scan_add_plant">Adicionar à minha lista</string>
+    <string name="scan_plant_saved">Planta adicionada à lista com sucesso!</string>
+    <string name="scan_unknown_category">Escaneadas</string>
+    <string name="scan_added">Adicionada</string>
 </resources>

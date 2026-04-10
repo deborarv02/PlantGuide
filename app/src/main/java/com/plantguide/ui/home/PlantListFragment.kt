@@ -13,6 +13,7 @@ import com.google.android.material.chip.Chip
 import com.plantguide.R
 import com.plantguide.databinding.FragmentPlantListBinding
 import com.plantguide.ui.PlantViewModel
+import com.plantguide.ui.addedit.AddEditPlantActivity
 import com.plantguide.ui.detail.PlantDetailActivity
 
 class PlantListFragment : Fragment() {
@@ -38,6 +39,11 @@ class PlantListFragment : Fragment() {
         setupRecyclerView()
         setupSearch()
         setupObservers()
+
+        // FAB: abrir tela de adicionar nova planta
+        binding.fabAddPlant.setOnClickListener {
+            startActivity(Intent(requireContext(), AddEditPlantActivity::class.java))
+        }
     }
 
     private fun setupRecyclerView() {

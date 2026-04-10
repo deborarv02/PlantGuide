@@ -64,12 +64,12 @@ com.plantguide
 2. Abra o projeto no **Android Studio**
 3. No arquivo `app/src/main/res/values/strings.xml`, substitua:
    ```xml
-   <string name="gemini_api_key">SUA_CHAVE_GEMINI_AQUI</string>
+   <string name="openrouter_api_key">SUA_CHAVE_OPENROUTER_AQUI</string>
    ```
-   pela sua chave obtida em [https://aistudio.google.com](https://aistudio.google.com)
+   pela sua chave obtida em https://openrouter.ai/workspaces/default/keys
 4. Execute em um dispositivo físico ou emulador com **Android 7.0+ (API 24)**
 
-> **Nota:** A funcionalidade de identificação de plantas requer dispositivo físico com câmera e conexão com a internet.
+> **Nota:** A funcionalidade de identificação de plantas utiliza a API do OpenRouter.ai, sendo necessário conexão com a internet. Para melhor desempenho, recomenda-se o uso em dispositivo físico com câmera.
 
 ---
 

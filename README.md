@@ -10,7 +10,7 @@ O **PlantGuide** permite ao usuário:
 - Navegar por um catálogo de plantas com informações detalhadas
 - Filtrar plantas por categoria e buscar por nome
 - Favoritar plantas para acesso rápido
-- **Identificar plantas em tempo real** apontando a câmera — a IA (Gemini Vision) reconhece a espécie e retorna nome popular, nome científico, família botânica, origem, nível de luz, frequência de rega, ambiente ideal, cuidados básicos, toxicidade para pets e uma curiosidade
+- **Identificar plantas em tempo real** apontando a câmera — a IA (via API do OpenRouter.ai) reconhece a espécie e retorna nome popular, nome científico, família botânica, origem, nível de luz, frequência de rega, ambiente ideal, cuidados básicos, toxicidade para pets e uma curiosidade
 
 ---
 

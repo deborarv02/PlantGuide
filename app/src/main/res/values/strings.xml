@@ -40,7 +40,7 @@
     <string name="about_section_app">Sobre o PlantGuide</string>
     <string name="about_description">O PlantGuide é um aplicativo de guia de plantas desenvolvido como projeto final da disciplina de Desenvolvimento Mobile II da Universidade de Passo Fundo (UPF). O app reúne informações detalhadas sobre espécies de plantas, incluindo nível de luz, frequência de rega, ambiente ideal, cuidados básicos e indicação de toxicidade para animais de estimação.</string>
     <string name="about_section_tech">Tecnologias Utilizadas</string>
-    <string name="about_technologies">• Kotlin\n• Android Studio\n• Room (SQLite) — persistência local\n• ViewModel + LiveData\n• CameraX + Gemini Vision API\n• Material Design 3\n• ViewBinding\n• RecyclerView com DiffUtil\n• Navigation Drawer</string>
+    <string name="about_technologies">• Kotlin\n• Android Studio\n• Room (SQLite) — persistência local\n• ViewModel + LiveData\n• CameraX + OpenRouter API\n• Material Design 3\n• ViewBinding\n• RecyclerView com DiffUtil\n• Navigation Drawer</string>
     <string name="about_section_discipline">Disciplina</string>
     <string name="about_discipline_info">ADS — Desenvolvimento Mobile II\nSemestre: 2026/1\nProfessores: Diego A. Lusa e Jaqson Dalbosco\nUniversidade de Passo Fundo — UPF</string>
 
@@ -53,15 +53,15 @@
     <string name="scan_camera_permission_denied">Permissão de câmera necessária para usar este recurso.</string>
     <string name="scan_camera_error">Não foi possível iniciar a câmera.</string>
     <string name="scan_capture_error">Erro ao capturar a foto. Tente novamente.</string>
-    <string name="scan_api_error">Erro da API (%d). Verifique sua chave Gemini.</string>
+    <string name="scan_api_error">Erro da API (%d). Verifique sua chave OpenRouter.</string>
     <string name="scan_network_error">Erro de rede. Verifique sua conexão e tente novamente.</string>
     <string name="scan_parse_error">Não foi possível interpretar a resposta. Tente novamente.</string>
     <string name="scan_result_name_placeholder">Carregando…</string>
     <string name="scan_result_scientific_placeholder"> </string>
     <string name="scan_toxicity_icon_desc">Ícone de toxicidade</string>
 
-    <!-- IMPORTANTE: coloque sua chave Gemini aqui antes de compilar -->
-    <string name="gemini_api_key">SUA_CHAVE_GEMINI_AQUI</string>
+    <!-- IMPORTANTE: coloque sua chave OpenRouter aqui antes de compilar -->
+    <string name="openrouter_api_key">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</string>
 
     <!-- CRUD - AddEditPlantActivity -->
     <string name="title_add_plant">Nova Planta</string>

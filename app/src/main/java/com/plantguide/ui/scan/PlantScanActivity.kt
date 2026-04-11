@@ -123,7 +123,7 @@ class PlantScanActivity : AppCompatActivity() {
                 override fun onCaptureSuccess(image: ImageProxy) {
                     val base64 = imageToCaptureBase64(image)
                     image.close()
-                    if (base64 != null) sendToGemini(base64)
+                    if (base64 != null) sendToOpenRouter(base64)
                     else showError(getString(R.string.scan_capture_error))
                 }
 
@@ -182,19 +182,17 @@ class PlantScanActivity : AppCompatActivity() {
     }
 
     // ---------------------------------------------------------------
-    //  Gemini Vision API  — envia a foto e recebe JSON com os dados
+    //  OpenRouter API — envia a foto e recebe JSON com os dados
     // ---------------------------------------------------------------
-    private fun sendToGemini(base64Image: String) {
+    private fun sendToOpenRouter(base64Image: String) {
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                val apiKey = getString(R.string.gemini_api_key)
-                val endpoint =
-                    "https://generativelanguage.googleapis.com/v1beta/models/" +
-                            "gemini-2.0-flash:generateContent?key=$apiKey"
+                val apiKey = getString(R.string.openrouter_api_key).trim()
+                val endpoint = "https://openrouter.ai/api/v1/chat/completions"
 
                 val prompt = """
                     Analise esta imagem e identifique a planta.
-                    Responda SOMENTE com JSON válido, sem texto extra, no formato:
+                    Responda SOMENTE com JSON válido, sem texto extra, sem blocos de código, no formato:
                     {
                       "found": true,
                       "commonName": "Nome popular em português",
@@ -214,36 +212,42 @@ class PlantScanActivity : AppCompatActivity() {
                 """.trimIndent()
 
                 val requestBody = JSONObject().apply {
-                    put("contents", JSONArray().apply {
+                    put("model", "openrouter/free")
+                    put("messages", JSONArray().apply {
                         put(JSONObject().apply {
-                            put("parts", JSONArray().apply {
-                                put(JSONObject().apply { put("text", prompt) })
+                            put("role", "user")
+                            put("content", JSONArray().apply {
                                 put(JSONObject().apply {
-                                    put("inline_data", JSONObject().apply {
-                                        put("mime_type", "image/jpeg")
-                                        put("data", base64Image)
+                                    put("type", "text")
+                                    put("text", prompt)
+                                })
+                                put(JSONObject().apply {
+                                    put("type", "image_url")
+                                    put("image_url", JSONObject().apply {
+                                        put("url", "data:image/jpeg;base64,$base64Image")
                                     })
                                 })
                             })
                         })
                     })
-                    put("generationConfig", JSONObject().apply {
-                        put("temperature", 0.2)
-                        put("maxOutputTokens", 800)
-                    })
+                    put("max_tokens", 1024)
+                    put("temperature", 0.2)
                 }
 
                 val url = URL(endpoint)
                 val conn = url.openConnection() as HttpURLConnection
                 conn.requestMethod = "POST"
                 conn.setRequestProperty("Content-Type", "application/json")
+                conn.setRequestProperty("Authorization", "Bearer $apiKey")
+                conn.setRequestProperty("HTTP-Referer", "https://github.com/plantguide")
+                conn.setRequestProperty("X-Title", "PlantGuide")
                 conn.doOutput = true
-                conn.connectTimeout = 20_000
-                conn.readTimeout = 20_000
+                conn.connectTimeout = 30_000
+                conn.readTimeout = 30_000
                 conn.outputStream.use { it.write(requestBody.toString().toByteArray()) }
 
                 val responseCode = conn.responseCode
-                val responseText = if (responseCode == 200) {
+                val responseText = if (responseCode in 200..299) {
                     conn.inputStream.bufferedReader().readText()
                 } else {
                     conn.errorStream?.bufferedReader()?.readText() ?: "Erro $responseCode"
@@ -251,17 +255,17 @@ class PlantScanActivity : AppCompatActivity() {
                 conn.disconnect()
 
                 withContext(Dispatchers.Main) {
-                    if (responseCode == 200) {
+                    if (responseCode in 200..299) {
                         parseAndShowResult(responseText)
                     } else {
                         val detail = when (responseCode) {
-                            400 -> "Chave inválida ou requisição malformada (400)"
-                            401 -> "Chave API não autorizada (401)"
-                            403 -> "Acesso negado — verifique se a API Gemini está ativada no Google AI Studio (403)"
-                            404 -> "Modelo não encontrado (404)"
+                            400 -> "Requisição inválida — verifique chave, modelo ou JSON enviado (400)"
+                            401 -> "Chave API inválida ou não autorizada (401)"
+                            402 -> "Créditos insuficientes ou rota indisponível no OpenRouter (402)"
+                            404 -> "Endpoint ou modelo não encontrado (404)"
                             429 -> "Limite de requisições atingido — tente novamente em instantes (429)"
-                            500, 503 -> "Servidor Google indisponível — tente novamente ($responseCode)"
-                            else -> "Erro $responseCode: ${responseText.take(120)}"
+                            500, 503 -> "Servidor OpenRouter indisponível — tente novamente ($responseCode)"
+                            else -> "Erro $responseCode: ${responseText.take(140)}"
                         }
                         showError(detail)
                     }
@@ -274,14 +278,12 @@ class PlantScanActivity : AppCompatActivity() {
 
     private fun parseAndShowResult(rawResponse: String) {
         try {
-            val geminiJson = JSONObject(rawResponse)
-            val text = geminiJson
-                .getJSONArray("candidates")
+            val json = JSONObject(rawResponse)
+            val text = json
+                .getJSONArray("choices")
                 .getJSONObject(0)
-                .getJSONObject("content")
-                .getJSONArray("parts")
-                .getJSONObject(0)
-                .getString("text")
+                .getJSONObject("message")
+                .getString("content")
 
             val jsonStr = text.replace("```json", "").replace("```", "").trim()
             val result = JSONObject(jsonStr)
